@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.policyservs.com/sitemap.xml
+
+# Disallow admin and other sensitive areas
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /config/
+
+# Crawl-delay: 10  # Uncomment if needed to prevent server overload

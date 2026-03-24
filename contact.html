@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - PolicyServs</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .contact-icon i {
+            font-size: 1.25rem;
+        }
+        .char-counter {
+            font-size: 0.75rem;
+            color: #6c757d;
+            text-align: right;
+        }
+        .char-counter.warning { color: #ffc107; }
+        .char-counter.error { color: #dc3545; }
+        .btn-send {
+            position: relative;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-send .spinner-border {
+            display: none;
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.5rem;
+        }
+        .btn-send.loading .spinner-border {
+            display: inline-block;
+        }
+        .text-decoration-underline-hover {
+            text-decoration: none;
+            position: relative;
+        }
+        .text-decoration-underline-hover:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: currentColor;
+            opacity: 0.8;
+            transition: width 0.3s ease;
+        }
+        .text-decoration-underline-hover:hover:after {
+            width: 100%;
+        }
+        .opacity-90 {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header bg-white shadow-sm py-2">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand p-0 d-flex align-items-center" href="index.html">
+                    <img src="assets/imgs/lobo.png" alt="PolicyServs Logo" class="logo-img">
+                    <div class="logo-text">
+                        <div class="brand-name">PolicyServs</div>
+                        <div class="tagline">Insure Well, Live Well</div>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="plans.html">Plans</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Testimonials</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    </ul>
+                    <a href="get-quote.html" class="btn btn-primary ms-lg-3 mt-3 mt-lg-0">Get a Free Quote</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card shadow-sm">
+                        <div class="row g-0">
+                            <!-- Contact Information -->
+                            <div class="col-lg-5 p-4 p-lg-5 text-white position-relative overflow-hidden" style="background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);">
+                                <div class="position-absolute top-0 end-0 w-100 h-100" style="background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg=='); opacity: 0.15; z-index: 0;"></div>
+                                <div class="position-relative z-1">
+                                    <h2 class="h2 mb-4 fw-bold">Get in Touch</h2>
+                                    <p class="mb-5 opacity-90">Have questions? Get in touch with our team for personalized assistance.</p>
+                                    
+                                    <div class="d-flex align-items-start mb-4 p-3 rounded-3" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(5px);">
+                                        <div class="contact-icon me-3 flex-shrink-0" style="background: rgba(255, 255, 255, 0.2);">
+                                            <i class="fas fa-map-marker-alt text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h5 mb-1">Our Location</h4>
+                                            <p class="mb-0 opacity-90">Saket, New Delhi, Delhi 110017</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flex align-items-start mb-4 p-3 rounded-3" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(5px);">
+                                        <div class="contact-icon me-3 flex-shrink-0" style="background: rgba(255, 255, 255, 0.2);">
+                                            <i class="fas fa-phone-alt text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h5 mb-1">Phone Number</h4>
+                                            <p class="mb-0">
+                                                <a href="tel:+917011122534" class="text-white text-decoration-underline-hover opacity-90">+91 7011122534</a><br>
+                                                <a href="tel:+918799767203" class="text-white text-decoration-underline-hover opacity-90">+91 8799767203</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flex align-items-start p-3 rounded-3" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(5px);">
+                                        <div class="contact-icon me-3 flex-shrink-0" style="background: rgba(255, 255, 255, 0.2);">
+                                            <i class="fas fa-envelope text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h5 mb-1">Email Address</h4>
+                                            <p class="mb-0">
+                                                <a href="mailto:info@policyservs.com" class="text-white text-decoration-underline-hover opacity-90">info@policyservs.com</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Contact Form -->
+                            <div class="col-lg-7 p-4 p-lg-5">
+                                <h2 class="h3 mb-4">Send us a Message</h2>
+                                
+                                <div id="form-messages" class="mb-4"></div>
+                                
+                                <form id="contactForm">                                    
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="name" class="form-label">Full Name *</label>
+                                            <input type="text" class="form-control" id="name" name="name" required>
+                                        </div>
+                                        
+                                        <div class="col-md-6">
+                                            <label for="email" class="form-label">Email Address *</label>
+                                            <input type="email" class="form-control" id="email" name="email" required>
+                                        </div>
+                                        
+                                        <div class="col-12">
+                                            <label for="phone_number" class="form-label">Phone Number *</label>
+                                            <input type="tel" class="form-control" id="phone_number" name="phone_number" required>
+                                        </div>
+                                        
+                                        <div class="col-12">
+                                            <label for="subject" class="form-label">Subject *</label>
+                                            <input type="text" class="form-control" id="subject" name="subject" required>
+                                        </div>
+                                        
+                                        <div class="col-12">
+                                            <label for="message" class="form-label">Your Message *</label>
+                                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                            <div class="char-counter"><span id="message-count">0</span> / 2000</div>
+                                        </div>
+                                        
+                                        <div class="col-12">
+                                            <div class="form-check mb-4">
+                                                <input class="form-check-input" type="checkbox" id="privacyPolicy" required>
+                                                <label class="form-check-label" for="privacyPolicy">
+                                                    I agree to the <a href="#" class="text-primary">Privacy Policy</a>
+                                                </label>
+                                            </div>
+                                            
+                                            <button type="submit" class="btn btn-primary btn-send">
+                                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                                <span class="btn-text">Send Message</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h4 class="text-white mb-4">Policy Servs</h4>
+                    <p class="text-white-50">Your trusted partner for all insurance needs.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html#home" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="index.html#about" class="text-white-50 text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="index.html#services" class="text-white-50 text-decoration-none">Services</a></li>
+                        <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-white mb-4">Contact Info</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Saket, New Delhi, Delhi 110017</li>
+                        <li class="mb-2"><i class="fas fa-phone-alt me-2"></i> +91 7011122534, +91 8799767203</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@policyservs.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="text-center">
+                <p class="mb-0 text-white-50">&copy; <span id="current-year"></span> PolicyServs. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Form handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const messageField = document.getElementById('message');
+            const messageCounter = document.getElementById('message-count');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const formMessages = document.getElementById('form-messages');
+            const API_ENDPOINT = 'https://6vabj5raja.execute-api.ap-south-1.amazonaws.com/stage-restapi-policyservs/';
+
+            // Show success message
+            function showSuccess(message) {
+                formMessages.innerHTML = `
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        ${message}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>`;
+                form.reset();
+                submitBtn.classList.remove('loading');
+                submitBtn.disabled = false;
+            }
+
+            // Show error message
+            function showError(message) {
+                formMessages.innerHTML = `
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        ${message}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>`;
+                submitBtn.classList.remove('loading');
+                submitBtn.disabled = false;
+            }
+
+            // Handle form submission
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Show loading state
+                submitBtn.classList.add('loading');
+                submitBtn.disabled = true;
+                
+                // Prepare form data
+                const formData = {
+                    type: 'contact',
+                    name: document.getElementById('name').value.trim(),
+                    email: document.getElementById('email').value.trim(),
+                    phone_number: document.getElementById('phone_number').value.trim(),
+                    subject: document.getElementById('subject').value.trim(),
+                    message: messageField.value.trim()
+                };
+                
+                try {
+                    // First, try with CORS mode
+                    let response = await fetch(API_ENDPOINT, {
+                        method: 'POST',
+                        mode: 'cors',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    // If CORS fails, try with a proxy
+                    if (!response.ok && response.type === 'opaque') {
+                        response = await fetch(`https://cors-anywhere.herokuapp.com/${API_ENDPOINT}`, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json',
+                                'X-Requested-With': 'XMLHttpRequest'
+                            },
+                            body: JSON.stringify(formData)
+                        });
+                    }
+                    
+                    let data;
+                    try {
+                        data = await response.json();
+                    } catch (e) {
+                        // If response is not JSON, try to get text
+                        const text = await response.text();
+                        throw new Error(text || 'Invalid response from server');
+                    }
+                    
+                    if (response.ok) {
+                        showSuccess('Your message has been sent successfully! We\'ll get back to you soon.');
+                    } else {
+                        throw new Error(data.message || `Server responded with status ${response.status}`);
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    showError(error.message || 'Failed to send message. Please try again later.');
+                }
+            });
+
+            // Character counter
+            function updateCharCount() {
+                const maxLength = 2000;
+                const currentLength = messageField.value.length;
+                const remaining = maxLength - currentLength;
+                messageCounter.textContent = `${currentLength} / ${maxLength}`;
+                messageCounter.className = 'char-counter' + 
+                    (remaining < 50 ? (remaining < 10 ? ' error' : ' warning') : '');
+            }
+
+            messageField.addEventListener('input', updateCharCount);
+            updateCharCount();
+
+            // Form submission
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Validate form
+                let isValid = true;
+                const requiredFields = form.querySelectorAll('[required]');
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        field.classList.add('is-invalid');
+                        isValid = false;
+                    } else {
+                        field.classList.remove('is-invalid');
+                    }
+                });
+
+                if (!isValid) return;
+
+                // Prepare form data
+                const formData = new FormData(form);
+                const formObject = {};
+                formData.forEach((value, key) => formObject[key] = value);
+
+                // Show loading state
+                submitBtn.disabled = true;
+                submitBtn.classList.add('loading');
+                formMessages.innerHTML = '';
+                formMessages.className = '';
+
+                try {
+                    const response = await fetch(form.getAttribute('action') || document.getElementById('api_endpoint').value, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(formObject)
+                    });
+
+                    const data = await response.json();
+                    
+                    if (response.ok) {
+                        formMessages.className = 'alert alert-success';
+                        formMessages.innerHTML = 'Thank you for your message! We will get back to you soon.';
+                        form.reset();
+                        updateCharCount();
+                    } else {
+                        throw new Error(data.message || 'Failed to send message');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    formMessages.className = 'alert alert-danger';
+                    formMessages.textContent = 'There was an error sending your message. Please try again later.';
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('loading');
+                    form.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

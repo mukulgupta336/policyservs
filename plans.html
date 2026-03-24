@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Plans - PolicyServs | Download PDF Brochures</title>
+    <meta name="description" content="Download comprehensive insurance plan brochures. Compare and choose the best life and health insurance plans from top providers in India.">
+    <meta name="keywords" content="insurance plans, download insurance brochure, health insurance pdf, life insurance pdf, policy documents, insurance comparison">
+    <meta name="author" content="PolicyServs">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://www.policyservs.com/plans.html" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.policyservs.com/plans.html">
+    <meta property="og:title" content="Insurance Plans - PolicyServs | Download PDF Brochures">
+    <meta property="og:description" content="Download comprehensive insurance plan brochures. Compare and choose the best life and health insurance plans from top providers in India.">
+    <meta property="og:image" content="https://www.policyservs.com/assets/imgs/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.policyservs.com/plans.html">
+    <meta property="twitter:title" content="Insurance Plans - PolicyServs | Download PDF Brochures">
+    <meta property="twitter:description" content="Download comprehensive insurance plan brochures. Compare and choose the best life and health insurance plans from top providers in India.">
+    <meta property="twitter:image" content="https://www.policyservs.com/assets/imgs/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/imgs/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/imgs/apple-touch-icon.png">
+    
+    <!-- Preconnect to important domains -->
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    
+    <!-- CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        /* Search and Filter */
+        .search-filter-container {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .search-box {
+            position: relative;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        
+        .search-box .input-group-text {
+            background: white;
+            border: none;
+            padding-left: 1.5rem;
+        }
+        
+        .search-box .form-control {
+            border: none;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            box-shadow: none;
+        }
+        
+        .search-box .btn {
+            padding: 0.5rem 2rem;
+            border-radius: 0 50px 50px 0;
+            font-weight: 500;
+        }
+        
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1.5rem auto 0;
+        }
+        
+        .filter-btn {
+            border: 1px solid #dee2e6;
+            background: white;
+            color: #495057;
+            padding: 0.4rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: #0d6efd;
+            color: white;
+            border-color: #0d6efd;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+        
+        /* Plan Cards */
+        .plan-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 1.5rem;
+        }
+        
+        .plan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(13, 110, 253, 0.15);
+        }
+        
+        .plan-card .card-body {
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .plan-card .card-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #212529;
+            font-size: 1.25rem;
+            min-height: 3rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .plan-card .card-text {
+            color: #6c757d;
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .plan-card .download-btn {
+            background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 0.75rem 1.5rem 0.75rem 3rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .plan-card .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+        }
+        
+        .plan-card .download-btn i {
+            left: 1.5rem;
+            color: white;
+        }
+        
+        /* Plan Category Headers */
+        .plan-category {
+            position: relative;
+            padding-bottom: 1rem;
+            margin: 4rem 0 3rem;
+            text-align: center;
+        }
+        
+        .plan-category h2 {
+            font-weight: 700;
+            color: #212529;
+            position: relative;
+            display: inline-block;
+            padding: 0 2rem;
+            background: white;
+            z-index: 1;
+        }
+        
+        .plan-category:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(13, 110, 253, 0.2), #0d6efd, rgba(13, 110, 253, 0.2));
+            z-index: 0;
+        }
+        
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background: #0d6efd;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-to-top:hover {
+            background: #0b5ed7;
+            transform: translateY(-3px);
+        }
+        
+        /* Loading Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .plan-card {
+            animation: fadeIn 0.5s ease-out forwards;
+            opacity: 0;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 5rem 0 4rem;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .search-box {
+                border-radius: 8px;
+            }
+            
+            .search-box .btn {
+                padding: 0.5rem 1rem;
+            }
+            
+            .plan-card {
+                margin-bottom: 1.5rem;
+            }
+        }
+        
+        /* No Results Message */
+        .no-results {
+            text-align: center;
+            padding: 4rem 0;
+            display: none;
+        }
+        
+        .no-results i {
+            font-size: 3rem;
+            color: #6c757d;
+            margin-bottom: 1rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header bg-white shadow-sm py-2">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand p-0 d-flex align-items-center" href="index.html">
+                    <img src="assets/imgs/lobo.png" alt="PolicyServs Logo" class="logo-img" style="height: 48px; width: auto; margin-right: 12px;">
+                    <div class="logo-text">
+                        <div class="brand-name">PolicyServs</div>
+                        <div class="tagline">Insure Well, Live Well</div>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="plans.html">Plans</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Testimonials</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <a href="get-quote.html" class="btn btn-primary ms-lg-3 mt-3 mt-lg-0">Get a Free Quote</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h1 class="display-5 fw-bold mb-3">Insurance Plans & Brochures</h1>
+            <p class="lead text-muted mb-4">Download detailed brochures of our comprehensive insurance plans</p>
+            
+            <div class="search-box mx-auto" style="max-width: 700px;">
+                <div class="input-group">
+                    <span class="input-group-text bg-white border-end-0"><i class="fas fa-search text-muted"></i></span>
+                    <input type="text" id="searchInput" class="form-control border-start-0" placeholder="Search plans...">
+                    <button class="btn btn-primary" type="button" id="searchBtn">
+                        <i class="fas fa-search me-2"></i>Search
+                    </button>
+                </div>
+            </div>
+            
+            <div class="filter-tabs mt-4">
+                <button class="filter-btn active" data-filter="all">All Plans</button>
+                <button class="filter-btn" data-filter="health">Health Insurance</button>
+                <button class="filter-btn" data-filter="life">Life Insurance</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- No Results Message -->
+    <div class="container">
+        <div class="no-results" id="noResults">
+            <i class="fas fa-search"></i>
+            <h4>No plans found</h4>
+            <p class="text-muted">Try adjusting your search or filter to find what you're looking for.</p>
+        </div>
+    </div>
+
+    <!-- Plans Section -->
+    <section class="pb-5">
+        <div class="container">
+            <!-- Health Insurance Plans -->
+            <div class="mb-5" id="healthSection">
+                <div class="plan-category">
+                    <h2>
+                        <i class="fas fa-heartbeat me-2"></i> Health Insurance Plans
+                    </h2>
+                </div>
+                <div class="row g-4" id="healthPlans">
+                    <!-- Plans will be dynamically inserted here by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Life Insurance Plans -->
+            <div class="mt-5 pt-5" id="lifeSection">
+                <div class="plan-category">
+                    <h2>
+                        <i class="fas fa-heart me-2"></i> Life Insurance Plans
+                    </h2>
+                </div>
+                <div class="row g-4" id="lifePlans">
+                    <!-- Plans will be dynamically inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Scroll to Top Button -->
+    <a href="#" class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h4 class="text-white mb-4">Policy Servs</h4>
+                    <p class="text-white-50">Your trusted partner for all insurance needs. We provide comprehensive insurance solutions tailored to your requirements.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html#home" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="index.html#about" class="text-white-50 text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="index.html#services" class="text-white-50 text-decoration-none">Services</a></li>
+                        <li class="mb-2"><a href="plans.html" class="text-white-50 text-decoration-none">Plans</a></li>
+                        <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-white mb-4">Contact Info</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Saket, New Delhi, Delhi 110017</li>
+                        <li class="mb-2"><i class="fas fa-phone-alt me-2"></i> +91 7011122534, +91 8799767203</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@policyservs.com</li>
+                        <li><i class="far fa-clock me-2"></i> Mon - Sat: 9:00 - 18:00</li>  
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-secondary">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-white-50">&copy; <span id="current-year"></span> PolicyServs. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 text-white-50">
+                        <a href="#" class="text-white-50 text-decoration-none me-3">Privacy Policy</a>
+                        <a href="#" class="text-white-50 text-decoration-none">Terms & Conditions</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        backToTop.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Insurance plans data
+        const plans = {
+            health: [
+                {
+                    title: "Activ Health Platinum",
+                    description: "Comprehensive health insurance with enhanced coverage options and cashless hospitalization.",
+                    file: "Activ-Health-Platinum-Enhanced-Brochure.pdf"
+                },
+                {
+                    title: "Active One Max",
+                    description: "A complete health solution with extensive coverage for individuals and families.",
+                    file: "Active-One-Max-Brochure.pdf"
+                },
+                {
+                    title: "CHI One Pager",
+                    description: "Critical illness coverage with comprehensive health insurance benefits.",
+                    file: "CHI_One pager_Version 1.0_April_2022.pdf"
+                },
+                {
+                    title: "Diabetes Safe Insurance",
+                    description: "Specialized health insurance plan for individuals with diabetes.",
+                    file: "Diabetes Safe Insurance One Pager_version 1.0_Dec_22.pdf"
+                },
+                {
+                    title: "HDFC ERGO Energy Plan",
+                    description: "Health insurance plan focusing on wellness and preventive care.",
+                    file: "Hdfc-Ergo-Energy-Plan-Brochure.pdf"
+                },
+                {
+                    title: "Optima Secure Global",
+                    description: "International health insurance with global coverage and benefits.",
+                    file: "Hdfc-Ergo-optima-secure-global-brochure.pdf"
+                },
+                {
+                    title: "Koti Suraksha",
+                    description: "Affordable health insurance for home insurance policyholders.",
+                    file: "Koti_Suraksha_One_Pager.pdf"
+                },
+                {
+                    title: "OPD Cover",
+                    description: "Outpatient department coverage for comprehensive healthcare needs.",
+                    file: "OPD BROUCHER.pdf"
+                },
+                {
+                    title: "ReAssure Health Plan",
+                    description: "Comprehensive health coverage with restore benefit and no claim bonus.",
+                    file: "ReAssure -  Brochure.pdf"
+                },
+                {
+                    title: "ReAssure 2.0",
+                    description: "Enhanced health insurance with additional benefits and coverage options.",
+                    file: "ReAssure 2.0 - SS.pdf"
+                },
+                {
+                    title: "Reassure 30",
+                    description: "30-day free look period health insurance with comprehensive coverage.",
+                    file: "Reassure30_SS_Limited.pdf"
+                },
+                {
+                    title: "Star Cancer Care Platinum",
+                    description: "Specialized cancer care coverage with comprehensive benefits.",
+                    file: "Star Cancer Care Platinum_One pager_Version 1.0_April_2022.pdf"
+                },
+                {
+                    title: "Star Health Assure",
+                    description: "Comprehensive health insurance for complete family protection.",
+                    file: "Star Health Assure_One pager_Version 1.0_Nov_22 (1).pdf"
+                },
+                {
+                    title: "Star Super Surplus",
+                    description: "Floater health insurance plan for family with high sum insured.",
+                    file: "Star Super Surplus (Floater)_One pager_Version 1.0_April_2022.pdf"
+                },
+                {
+                    title: "Super Star Health Plan",
+                    description: "Comprehensive health insurance with super benefits for individuals.",
+                    file: "Super Star_One_Pager.pdf"
+                },
+                {
+                    title: "Young Star Health Plan",
+                    description: "Affordable health insurance designed for young individuals.",
+                    file: "Young Star_One pager_Version 1.0_April_2022.pdf"
+                },
+                {
+                    title: "Activ One",
+                    description: "Comprehensive health insurance with additional benefits.",
+                    file: "activ one.pdf"
+                },
+                {
+                    title: "Aspire Health Plan",
+                    description: "Health insurance plan for those who aspire for better healthcare.",
+                    file: "aspire_ss.pdf"
+                },
+                {
+                    title: "Complete Health Insurance",
+                    description: "End-to-end health coverage for all your medical needs.",
+                    file: "complete-health-insurance-brochure.pdf"
+                },
+                {
+                    title: "Elevate Health Plan",
+                    description: "Elevate your health coverage with our premium insurance plan.",
+                    file: "elevate-brochure_final_4-6-24 (1).pdf"
+                },
+                {
+                    title: "Medicare Select",
+                    description: "Select the best healthcare coverage for your needs.",
+                    file: "medicare_select_prospectus_efd23b0ad6.pdf"
+                },
+                {
+                    title: "Optima Secure",
+                    description: "Secure your health with our optimal coverage plan.",
+                    file: "optima-secure-brochure.pdf"
+                },
+                {
+                    title: "Star Medi Classic",
+                    description: "Classic health insurance with essential coverage.",
+                    file: "star medi classicOne Pager (1).pdf"
+                },
+                {
+                    title: "Tata Medicare Premier",
+                    description: "Premier healthcare coverage from Tata.",
+                    file: "tata Medicare+Premier-Brochure.pdf"
+                }
+            ],
+            life: [
+                {
+                    title: "Poorna Suraksha Kawach",
+                    description: "Comprehensive life insurance plan offering complete protection.",
+                    file: "ABSLI Poorna Suraksha Kawach Plan - Product Brochure.pdf"
+                },
+                {
+                    title: "Assured Income Plus",
+                    description: "Guaranteed income with life cover for financial security.",
+                    file: "ABSLI_Assured_Income_Plus_Brochure_Web_version_V10_9571050b25.pdf"
+                },
+                {
+                    title: "Assured Savings Plan",
+                    description: "Secure your future with guaranteed returns and life cover.",
+                    file: "ABSLI_Assured_Savings_Plan_Brochure.pdf"
+                },
+                {
+                    title: "Digi Shield",
+                    description: "Digital term insurance plan for comprehensive life cover.",
+                    file: "ABSLI_Digi_Shield_Brochure_V10_104564f5ee.pdf"
+                },
+                {
+                    title: "Income Suraksha Plan",
+                    description: "Secure your family's income with this comprehensive plan.",
+                    file: "ABSLI_Income_Suraksha_Plan_V01_Brochure_Web_Version_9bc3b2a0c3.pdf"
+                },
+                {
+                    title: "Nishchit Aayush Plan",
+                    description: "Retirement plan with guaranteed income and life cover.",
+                    file: "ABSLI_Nishchit_Aayush_Plan_V09_Brochure_Web_Version_549190c4a4.pdf"
+                },
+                {
+                    title: "Secure Plus Plan",
+                    description: "Life insurance with savings and protection benefits.",
+                    file: "ABSLI_Secure_Plus_Plan_Brochure.pdf"
+                },
+                {
+                    title: "Click 2 Protect Super",
+                    description: "Term insurance plan with comprehensive coverage options.",
+                    file: "HDFC-Life-Click-2-Protect-Super-HDFC-Bank-Brochure.pdf"
+                },
+                {
+                    title: "Sanchay Par Advantage",
+                    description: "Savings plan with life cover and guaranteed returns.",
+                    file: "HDFC-Life-Sanchay-Par-Advantage-Retail-Brochure.pdf"
+                },
+                {
+                    title: "Sanchay Par Combo",
+                    description: "Combination of savings and protection for your future.",
+                    file: "SANCHAY PAR_COMBO.pdf"
+                },
+                {
+                    title: "Flexi Wealth Advantage",
+                    description: "Flexible investment plan with life cover and wealth creation.",
+                    file: "flexi-wealth-advantage-plan.pdf"
+                },
+                {
+                    title: "Max Life STPP Axis",
+                    description: "Systematic transfer plan for long-term wealth creation.",
+                    file: "max-life-stpp-axis.pdf"
+                }
+            ]
+        };
+
+        // Function to create plan card
+        function createPlanCard(plan, type, index) {
+            const filePath = `assets/pdf/${type}plan/${plan.file}`;
+            const delay = (index * 100) + 'ms';
+            return `
+                <div class="col-md-6 col-lg-4" style="animation-delay: ${delay}">
+                    <div class="card plan-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="${type === 'health' ? 'fas fa-heartbeat' : 'fas fa-heart'} me-2 text-primary"></i>
+                                ${plan.title}
+                            </h5>
+                            <p class="card-text">${plan.description}</p>
+                            <a href="${filePath}" class="btn download-btn" download>
+                                <i class="fas fa-download"></i> Download Brochure
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Function to render plans
+        function renderPlans(filter = '') {
+            const healthContainer = document.getElementById('healthPlans');
+            const lifeContainer = document.getElementById('lifePlans');
+            const noResults = document.getElementById('noResults');
+            
+            // Clear existing content
+            healthContainer.innerHTML = '';
+            lifeContainer.innerHTML = '';
+            
+            const searchTerm = filter.toLowerCase();
+            let hasHealthPlans = false;
+            let hasLifePlans = false;
+            
+            // Filter and add health plans
+            const filteredHealth = plans.health.filter(plan => 
+                !searchTerm || 
+                plan.title.toLowerCase().includes(searchTerm) || 
+                plan.description.toLowerCase().includes(searchTerm)
+            );
+            
+            if (filteredHealth.length > 0) {
+                filteredHealth.forEach((plan, index) => {
+                    healthContainer.innerHTML += createPlanCard(plan, 'health', index);
+                });
+                hasHealthPlans = true;
+            }
+            
+            // Filter and add life plans
+            const filteredLife = plans.life.filter(plan => 
+                !searchTerm || 
+                plan.title.toLowerCase().includes(searchTerm) || 
+                plan.description.toLowerCase().includes(searchTerm)
+            );
+            
+            if (filteredLife.length > 0) {
+                filteredLife.forEach((plan, index) => {
+                    lifeContainer.innerHTML += createPlanCard(plan, 'life', index);
+                });
+                hasLifePlans = true;
+            }
+            
+            // Show/hide sections based on filters
+            document.getElementById('healthSection').style.display = hasHealthPlans ? 'block' : 'none';
+            document.getElementById('lifeSection').style.display = hasLifePlans ? 'block' : 'none';
+            
+            // Show no results message if no plans match
+            noResults.style.display = (hasHealthPlans || hasLifePlans) ? 'none' : 'block';
+            
+            // Add animation to cards
+            animateCards();
+        }
+        
+        // Function to animate cards with delay
+        function animateCards() {
+            const cards = document.querySelectorAll('.plan-card');
+            cards.forEach((card, index) => {
+                card.style.animation = `fadeIn 0.5s ease-out ${index * 0.1}s forwards`;
+            });
+        }
+        
+        // Function to filter plans by type
+        function filterPlans(type) {
+            const healthSection = document.getElementById('healthSection');
+            const lifeSection = document.getElementById('lifeSection');
+            
+            if (type === 'all') {
+                healthSection.style.display = 'block';
+                lifeSection.style.display = 'block';
+            } else if (type === 'health') {
+                healthSection.style.display = 'block';
+                lifeSection.style.display = 'none';
+            } else if (type === 'life') {
+                healthSection.style.display = 'none';
+                lifeSection.style.display = 'block';
+            }
+            
+            // Re-apply search filter if any
+            const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+            if (searchTerm) {
+                searchPlans(searchTerm);
+            }
+            
+            // Scroll to top of section
+            window.scrollTo({
+                top: type === 'all' ? 0 : document.getElementById(`${type}Section`).offsetTop - 100,
+                behavior: 'smooth'
+            });
+        }
+
+        // Search functionality
+        function searchPlans(query) {
+            const searchTerm = query.trim().toLowerCase();
+            renderPlans(searchTerm);
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Render all plans initially
+            renderPlans();
+            
+            // Search functionality
+            const searchInput = document.getElementById('searchInput');
+            const searchBtn = document.getElementById('searchBtn');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            // Search button click handler
+            searchBtn.addEventListener('click', function() {
+                searchPlans(searchInput.value);
+            });
+            
+            // Search input keyup handler
+            let searchTimeout;
+            searchInput.addEventListener('keyup', function(e) {
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(() => {
+                    searchPlans(searchInput.value);
+                }, 300);
+                
+                if (e.key === 'Enter') {
+                    searchPlans(searchInput.value);
+                }
+            });
+            
+            // Filter button click handlers
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active state
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Apply filter
+                    const filterType = this.getAttribute('data-filter');
+                    filterPlans(filterType);
+                });
+            });
+            
+            // Scroll to top button
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.classList.add('visible');
+                } else {
+                    scrollToTopBtn.classList.remove('visible');
+                }
+            });
+            
+            scrollToTopBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

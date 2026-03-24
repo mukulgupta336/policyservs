@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - PolicyServs</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .error-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+        .error-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+        }
+        .error-code {
+            font-size: 120px;
+            font-weight: 700;
+            color: #0d6efd;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+        .error-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #212529;
+        }
+        .error-text {
+            font-size: 18px;
+            color: #6c757d;
+            margin-bottom: 30px;
+        }
+        .btn-back {
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        .error-illustration {
+            max-width: 300px;
+            margin: 0 auto 30px;
+        }
+        @media (max-width: 767.98px) {
+            .error-code {
+                font-size: 80px;
+            }
+            .error-title {
+                font-size: 28px;
+            }
+            .error-text {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Error Section -->
+    <section class="error-section">
+        <div class="container">
+            <div class="error-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="error-illustration">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="#0d6efd">
+                        <path d="M100,10c49.7,0,90,40.3,90,90s-40.3,90-90,90S10,149.7,10,100S50.3,10,100,10 M100,0C44.8,0,0,44.8,0,100s44.8,100,100,100s100-44.8,100-100S155.2,0,100,0L100,0z"/>
+                        <path d="M100,30c-38.6,0-70,31.4-70,70s31.4,70,70,70s70-31.4,70-70S138.6,30,100,30 M100,140c-22.1,0-40-17.9-40-40s17.9-40,40-40s40,17.9,40,40S122.1,140,100,140z"/>
+                        <rect x="95" y="60" width="10" height="30"/>
+                        <rect x="95" y="100" width="10" height="10"/>
+                    </svg>
+                </div>
+                <h1 class="error-code">404</h1>
+                <h2 class="error-title">Oops! Page Not Found</h2>
+                <p class="error-text">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+                <a href="index.php" class="btn btn-primary btn-back">
+                    <i class="fas fa-arrow-left me-2"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animation
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                once: true,
+                disable: 'mobile'
+            });
+            
+            // Hide preloader after page loads
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                window.addEventListener('load', function() {
+                    setTimeout(function() {
+                        preloader.style.opacity = '0';
+                        setTimeout(function() {
+                            preloader.style.display = 'none';
+                        }, 300);
+                    }, 300);
+                });
+            }
+        });
+        
+        // Fallback in case the page takes too long to load
+        setTimeout(function() {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.opacity = '0';
+                setTimeout(function() {
+                    preloader.style.display = 'none';
+                }, 300);
+            }
+        }, 5000);
+    </script>
+</body>
+</html>
